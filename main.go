@@ -6,6 +6,4 @@ import (
 
 func main() {
 	cmd.Execute()
-	// _ = Encode("testimg.png", "supersecretmessage")
-	// _ = Decode("testimg.png")
 }
