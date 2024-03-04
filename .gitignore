@@ -17,3 +17,6 @@
 
 # Go workspace file
 go.work
+
+# binary produced by go build
+stegan
