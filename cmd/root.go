@@ -64,13 +64,14 @@ func NewRootCmd() *cobra.Command {
 func init() {
 	rootCmd = NewRootCmd()
 	rootCmd.PersistentFlags().
-		BoolVar(&encode, "encode", false, "encode a message into the specified image file, resulting in a new encoded image file")
+		BoolVarP(&encode, "encode", "e", false, "encode a message into the specified image file, resulting in a new encoded image file")
 	rootCmd.PersistentFlags().
-		BoolVar(&decode, "decode", false, "decode a message from the specified image file, resulting in a printed message to stdout")
-	rootCmd.PersistentFlags().StringVar(&inputFile, "in", "", "input image file")
-	rootCmd.PersistentFlags().StringVar(&outputFile, "out", "", "output image file (if encoding)")
+		BoolVarP(&decode, "decode", "d", false, "decode a message from the specified image file, resulting in a printed message to stdout")
+	rootCmd.PersistentFlags().StringVarP(&inputFile, "in", "i", "", "input image file")
 	rootCmd.PersistentFlags().
-		StringVar(&message, "message", "", "message to encode into image (if encoding)")
+		StringVarP(&outputFile, "out", "o", "", "output image file (if encoding)")
+	rootCmd.PersistentFlags().
+		StringVarP(&message, "message", "m", "", "message to encode into image (if encoding)")
 }
 
 func Execute() error {
