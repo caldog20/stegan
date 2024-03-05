@@ -40,7 +40,7 @@ func validateArgs() error {
 
 func NewRootCmd() *cobra.Command {
 	return &cobra.Command{
-		Use:   "stegen",
+		Use:   "stegan",
 		Short: "A steganography tool to encode/decode messages into images",
 		Long:  "",
 		RunE: func(cmd *cobra.Command, args []string) error {
