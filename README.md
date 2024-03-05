@@ -14,7 +14,7 @@ The project doesn't require many dependencies. Just clone the repo, run `go mod 
 `stegan --decode --in <input image file>`
 
 ## Full Usage
-`Usage:
+```Usage:
   stegan [flags]
 
 Flags:
@@ -23,5 +23,5 @@ Flags:
   -h, --help             help for stegen
   -i, --in string        input image file
   -m, --message string   message to encode into image (if encoding)
-  -o, --out string       output image file (if encoding)`
+  -o, --out string       output image file (if encoding)```
 
